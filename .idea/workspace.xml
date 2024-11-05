@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30be52d4-eb23-4dcb-adb9-043e08fe6340" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/stock_price_prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/StockForecastTS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StockForecastTS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IBM_stock_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/IBM_stock_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpiderFromAlphaVantage.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpiderFromAlphaVantage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StockLSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/StockLSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_model.keras" beforeDir="false" afterPath="$PROJECT_DIR$/my_model.keras" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock_price_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock_price_prediction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +35,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.DataPreprocessing.executor": "Run",
-    "Python.SpiderFromAlphaVantage.executor": "Run",
-    "Python.StockLSTM.executor": "Run",
-    "Python.stock_price_prediction.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.DataPreprocessing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SpiderFromAlphaVantage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.StockLSTM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stock_price_prediction.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.stock_price_prediction">
+}</component>
+  <component name="RunManager" selected="Python.StockLSTM">
     <configuration name="DataPreprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="StockForecastTS" />
       <option name="ENV_FILES" value="" />
@@ -161,9 +159,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.stock_price_prediction" />
         <item itemvalue="Python.StockLSTM" />
         <item itemvalue="Python.DataPreprocessing" />
+        <item itemvalue="Python.stock_price_prediction" />
         <item itemvalue="Python.SpiderFromAlphaVantage" />
       </list>
     </recent_temporary>

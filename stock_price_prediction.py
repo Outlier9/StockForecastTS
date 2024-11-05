@@ -1,5 +1,6 @@
 import os
 # 设置环境变量以禁用 oneDNN 优化
+# 下边这一行需要写在tensorflow之前
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import numpy as np
 import pandas as pd
@@ -71,6 +72,7 @@ valid.loc[:, 'Predictions'] = predictions
 
 
 # 绘制图像
+# 这里如果使用中文需要下载字体，所以决定使用英文
 plt.figure(figsize=(14, 5))
 plt.title('Stock Price Prediction', fontsize=20)
 plt.xlabel('Date', fontsize=14)

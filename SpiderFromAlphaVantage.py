@@ -3,9 +3,9 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
-from tqdm import tqdm  # 导入tqdm库
+from tqdm import tqdm
 
-# Alpha Vantage API key（替换为您的实际API Key）
+# Alpha Vantage API keyAlpha Vantage
 API_KEY = 'FYG0G5H1J6BGKPJD'
 
 
@@ -15,7 +15,7 @@ def fetch_stock_data(symbol):
     从Alpha Vantage API获取股票数据。
 
     参数:
-    - symbol (str): 股票代码，例如 "IBM"
+    - symbol (str): 股票代码，"IBM"
 
     返回:
     - DataFrame: 包含时间序列的DataFrame，带有日期和股票价格及涨跌幅。
@@ -27,7 +27,7 @@ def fetch_stock_data(symbol):
 
     print(f"开始爬取 {symbol} 的股票数据...")
 
-    # 分批请求数据
+    # 分批请求数据（因为Alpha Vantage对请求有限制）
     with tqdm(total=(end_date - start_date).days) as pbar:
         while start_date < end_date:
             url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&outputsize=full&apikey={API_KEY}'
@@ -96,9 +96,9 @@ def store_to_mysql(df):
     # 连接到MySQL数据库
     conn = mysql.connector.connect(
         host='localhost',
-        user='root',  # 替换为你的数据库用户名
-        password='jbyoutlier',  # 替换为你的数据库密码
-        database='stock_data'  # 替换为你创建的数据库名
+        user='root',
+        password='jbyoutlier',
+        database='stock_data'
     )
 
     cursor = conn.cursor()

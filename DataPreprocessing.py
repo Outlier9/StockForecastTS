@@ -1,7 +1,5 @@
-import mysql.connector
 from sqlalchemy import create_engine
 import pandas as pd
-
 
 # 数据库连接函数
 def connect_to_mysql():
@@ -15,7 +13,6 @@ def fetch_data_from_mysql():
     query = "SELECT * FROM ibm_stock"
     stock_data = pd.read_sql(query, engine)  # 使用SQLAlchemy引擎
     return stock_data
-
 
 # 数据清洗函数
 def clean_data(stock_data):
@@ -32,6 +29,10 @@ def clean_data(stock_data):
     stock_data['low'] = stock_data['low'].astype(float)
     stock_data['close'] = stock_data['close'].astype(float)
     stock_data['volume'] = stock_data['volume'].astype(int)
+
+    # 处理 Price Change %
+    stock_data['price_change'] = stock_data['price_change'].astype(float)  # 确保 'Price Change %' 列为浮点数
+    stock_data['price_change'] = stock_data['price_change'].fillna(0)  # 填充缺失值
 
     # 继续进行差分和特征提取
     stock_data['close_diff'] = stock_data['close'].diff()
@@ -53,14 +54,13 @@ def clean_data(stock_data):
 
     return stock_data
 
-
 # 存储到新表的函数
 def store_to_new_table(df):
     conn = connect_to_mysql()
     cursor = conn.cursor()
 
     # 创建新表的SQL命令
-    cursor.execute("""
+    cursor.execute(""" 
     CREATE TABLE IF NOT EXISTS ibm_stock_cleaned (
         date DATE PRIMARY KEY,
         open FLOAT,
@@ -71,26 +71,27 @@ def store_to_new_table(df):
         close_diff FLOAT,
         ma20 FLOAT,
         ma50 FLOAT,
-        rsi FLOAT
+        rsi FLOAT,
+        price_change FLOAT  -- 添加 price_change 列
     );
     """)
 
     # 插入数据
     insert_query = """
-    INSERT INTO ibm_stock_cleaned (date, open, high, low, close, volume, close_diff, ma20, ma50, rsi)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+    INSERT INTO ibm_stock_cleaned (date, open, high, low, close, volume, close_diff, ma20, ma50, rsi, price_change)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
     """
 
     for index, row in df.iterrows():
         cursor.execute(insert_query, (
             index.date(), row['Open'], row['High'], row['Low'], row['Close'],
-            int(row['Volume']), row['Close_diff'], row['MA20'], row['MA50'], row['RSI']
+            int(row['Volume']), row['Close_diff'], row['MA20'], row['MA50'], row['RSI'],
+            row['price_change']  # 添加 price_change 数据
         ))
 
     conn.commit()
     cursor.close()
     conn.close()
-
 
 # 主程序
 if __name__ == "__main__":

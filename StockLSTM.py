@@ -29,7 +29,7 @@ scaler = MinMaxScaler(feature_range=(0, 1))
 scaled_data = scaler.fit_transform(cleaned_data['close'].values.reshape(-1, 1))
 
 # 分割训练和测试集
-# 数据的前80%用作训练集，后20%作为验证集
+# 数据前80%用作训练集，后20%作为验证集
 train_size = int(len(scaled_data) * 0.8)
 train_data, test_data = scaled_data[:train_size], scaled_data[train_size:]
 
