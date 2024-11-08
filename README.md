@@ -389,19 +389,7 @@ plt.show()
 
 [57 长短期记忆网络（LSTM）【动手学深度学习v2】_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1JU4y1H7PC/?spm_id_from=333.337.search-card.all.click&vd_source=df847770af0ac774745e4b26af56f1d6)
 
-[神经网络之lstm-CSDN博客](https://blog.csdn.net/qq_57143062/article/details/141095546)
-
-[AI长短期记忆网络（LSTM）：解锁序列数据的深度潜能（上）](https://baijiahao.baidu.com/s?id=1805289441009599680&wfr=spider&for=pc)
-
 [GitHub - TankZhouFirst/Pytorch-LSTM-Stock-Price-Predict: LSTM 实现的股票最高价预测](https://github.com/TankZhouFirst/Pytorch-LSTM-Stock-Price-Predict)
 
 [GitHub - beathahahaha/LSTM-: LSTM长短期记忆模型预测股票涨跌](https://github.com/beathahahaha/LSTM-)
-
-
-
-
-
-
-
-
 
