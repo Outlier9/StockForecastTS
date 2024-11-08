@@ -1,5 +1,3 @@
-# StockForecastTS
-11.5阶段性完成成果报告
 <h2 id="OASBH">题目：基于时间序列预测的股票价格预测系统</h2>
 <h3 id="mRfPm">1. 背景</h3>
 在当今快速发展的金融市场中，股票价格预测已成为一个备受关注的研究领域。传统的股票分析方法通常依赖于财务报表、行业分析和市场趋势等基本面数据。然而，随着数据科学和机器学习技术的崛起，利用历史价格数据进行时间序列分析和预测的方法逐渐获得青睐。
@@ -389,7 +387,19 @@ plt.show()
 
 [57 长短期记忆网络（LSTM）【动手学深度学习v2】_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1JU4y1H7PC/?spm_id_from=333.337.search-card.all.click&vd_source=df847770af0ac774745e4b26af56f1d6)
 
+[神经网络之lstm-CSDN博客](https://blog.csdn.net/qq_57143062/article/details/141095546)
+
+[AI长短期记忆网络（LSTM）：解锁序列数据的深度潜能（上）](https://baijiahao.baidu.com/s?id=1805289441009599680&wfr=spider&for=pc)
+
 [GitHub - TankZhouFirst/Pytorch-LSTM-Stock-Price-Predict: LSTM 实现的股票最高价预测](https://github.com/TankZhouFirst/Pytorch-LSTM-Stock-Price-Predict)
 
 [GitHub - beathahahaha/LSTM-: LSTM长短期记忆模型预测股票涨跌](https://github.com/beathahahaha/LSTM-)
+
+
+
+
+
+
+
+
 
